@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 24px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: center;
+    color: #1e3a8a;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.char-count {
+    font-size: 12px;
+    color: #6b7280;
+    background: #f3f4f6;
+    padding: 2px 8px;
+    border-radius: 10px;
+    transition: color 0.3s ease;
+}
+
+.char-count.warning {
+    color: #dc2626;
+}
+
+.input, .textarea {
+    width: 80%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #f9fafb;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus, .textarea:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+    background: white;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.preview {
+    margin-top: 24px;
+    padding: 16px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.preview h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1e3a8a;
+}
+
+.preview p {
+    font-size: 14px;
+    margin: 8px 0;
+    color: #374151;
+}
+
+.preview p strong {
+    color: #1f2937;
+    font-weight: 600;
+}
