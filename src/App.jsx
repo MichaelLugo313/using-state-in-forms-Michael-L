@@ -19,6 +19,10 @@ function FeedbackForm() {
         }));
     };
 
+    const isFormValid = formData.name.trim() !== ''
+        && formData.email.trim() !== ''
+        && formData.feedback.trim() !== '';
+
     return (
         <div className="container">
             <h1>User Feedback Form</h1>
@@ -70,6 +74,12 @@ function FeedbackForm() {
                 <p><strong>Email:</strong> {formData.email || 'No email entered'}</p>
                 <p><strong>Feedback:</strong> {formData.feedback || 'No feedback entered'}</p>
             </div>
+            <button
+                type="submit"
+                disabled={!isFormValid}
+                className={`submit-btn ${isFormValid ? 'active' : ''}`}>
+                Submit Feedback
+            </button>
         </div>
     );
 }
